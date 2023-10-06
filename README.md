@@ -37,6 +37,8 @@ PR are accepted
 1. Complete the GitHub workflows
 2. Label 3 bugs and fix one
 3. Suggest 3 features and submit on PR
+4. SOURCE [Muhd-Shahid](https://github.com/Muhd-Shahid/Learn-Python-Data-Access/blob/main/PostgreSQL/Part%204%20%20Comparison
+   %20of%20Methods%20for%20Importing%20bulk%20CSV%20data%20Into%20PostgreSQL%20Using%20Python.ipynb)
 
 
 
