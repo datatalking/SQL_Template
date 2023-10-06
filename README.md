@@ -1,4 +1,4 @@
-# SQL Template
+# SQL_Template
 My starting point for new projects dealing with data, pandas needs "Highspeed Intuitive Features"
 Pandas has many great features but I keep having to re-build most of the same tools for each job.
 
