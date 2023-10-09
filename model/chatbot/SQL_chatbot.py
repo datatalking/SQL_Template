@@ -4,6 +4,28 @@
 FILENAME = "movies.txt"
 
 
+def main():
+    """
+    calls the stack to display column and read menu to terminal
+    :return:
+    """
+    display_menu()
+    movies = read_movies()
+    while True:
+        command = input("Command: ")
+        if command == "list":
+            list_movies(movies)
+        elif command == "add":
+            add_movie(movies)
+        elif command == "del":
+            delete_movie(movies)
+        elif command == "exit":
+            print("Bye!")
+            break
+        else:
+            print("Not a valid command. Please try again.")
+
+
 def write_movies(movies):
     """
     open FILENAME and add movies
@@ -30,7 +52,7 @@ def read_movies():
 
 def list_movies(movies):
     """
-
+    list all the movies inside movies object
     :param movies:
     :return:
     """
@@ -42,7 +64,7 @@ def list_movies(movies):
 
 def add_movie(movies):
     """
-
+        add a movie to end of list
     :param movies:
     :return:
     """
@@ -54,7 +76,7 @@ def add_movie(movies):
 
 def delete_movie(movies):
     """
-
+        delete movie by number
     :param movies:
     :return:
     """
@@ -66,10 +88,18 @@ def delete_movie(movies):
 
 def display_menu():
     """
-
+        display the menu on screen
     :return:
     """
     print("The Movie List Program")
     print()
     print("COMMAND MENU")
-    print("list - List")
+    print("list - List all movies")
+    print("add -  Add a movie")
+    print("del -  Delete a movie")
+    print("exit - Exit program")
+    print()
+
+
+if __name__ == "__main__":
+    main()
