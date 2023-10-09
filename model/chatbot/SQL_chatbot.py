@@ -74,7 +74,7 @@ def list_movies(movies):
     print()
 
 
-def add_movie(movies):
+def add_movie(movie):
     """
         add a movie to end of list
     :param movies:
