@@ -2,6 +2,7 @@
 import csv
 
 FILENAME = "../../data/movies.txt"
+CSV_FILENAME = "../../data/movies.csv"
 
 
 def main():
@@ -10,7 +11,7 @@ def main():
     :return:
     """
     display_menu()
-
+    convert_to_csv(CSV_FILENAME)
     movies = read_movies()
     while True:
         command = input("Command: ")
@@ -27,9 +28,14 @@ def main():
             print("Not a valid command. Please try again.")
 
 
-with open("../../data/movies.csv", "w", newline="") as file:
-    writer = csv.writer(file)
-    writer.writerows(movies)
+def convert_to_csv(CSV_FILENAME):
+    """
+    convert a txt file to csv
+    :return:
+    """
+    with open(CSV_FILENAME, "w", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerows(CSV_FILENAME)
 
 
 def write_movies(movies):
