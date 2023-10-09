@@ -1,0 +1,3 @@
+﻿movies = [["The Holy Grail", 1975, 9.99],
+["Life of Brian", 1979, 12.30],
+["The Meaning of Life", 1983, 7.5]

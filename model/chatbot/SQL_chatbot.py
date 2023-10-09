@@ -1,7 +1,7 @@
 ﻿# SOURCE
+import csv
 
-
-FILENAME = "movies.txt"
+FILENAME = "../../data/movies.txt"
 
 
 def main():
@@ -10,6 +10,7 @@ def main():
     :return:
     """
     display_menu()
+
     movies = read_movies()
     while True:
         command = input("Command: ")
@@ -24,6 +25,11 @@ def main():
             break
         else:
             print("Not a valid command. Please try again.")
+
+
+with open("../../data/movies.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerows(movies)
 
 
 def write_movies(movies):
