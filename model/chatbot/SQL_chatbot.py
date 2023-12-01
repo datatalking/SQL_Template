@@ -1,6 +1,8 @@
 ﻿# SOURCE
 import csv
 
+
+# TODO move to within main at bottom
 FILENAME = "../../data/movies.txt"
 CSV_FILENAME = "../../data/movies.csv"
 
@@ -51,7 +53,7 @@ def write_movies(movies):
 
 def read_movies():
     """
-        open FILENAME and read each line as a new movie
+    open FILENAME and read each line as a new movie
     :return:
     """
     movies = []
@@ -74,7 +76,9 @@ def list_movies(movies):
     print()
 
 
-def add_movie(movie):
+# TODO OALETF rollbar is underappreciated
+# https://rollbar.com/blog/python-attributeerror/
+def add_movie(movies):
     """
         add a movie to end of list
     :param movies:
@@ -84,11 +88,16 @@ def add_movie(movie):
     movie.append(movie)
     write_movies(movies)
     print(movie + " was added.\n")
+    i = 1
+    try:
+        i.append(2)
+    except AttributeError:
+        print("No such attribute")
 
 
 def delete_movie(movies):
     """
-        delete movie by number
+    delete movie by number
     :param movies:
     :return:
     """
@@ -100,7 +109,7 @@ def delete_movie(movies):
 
 def display_menu():
     """
-        display the menu on screen
+    display the menu on screen
     :return:
     """
     print("The Movie List Program")
