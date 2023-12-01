@@ -2,8 +2,19 @@
 # SOURCE
 
 
+import time
 import os
 import csv
+import shutil
+from os import environ, path
+from dotenv import load_dotenv
+import TODO_scanner
+
+load_dotenv()
+
+
+def main():
+    scan_todo_tags()
 
 
 def scan_todo_tags():
@@ -14,12 +25,15 @@ def scan_todo_tags():
     :param tag_FOUND: The TODO tag found (e.g., TODO, FIXME, #TODO)
     :param tag_message: The message following the TODO tag
     :param date_added: The date the TODO tag was added to the file (using the file's creation time)
-    :param user: The username of the user running the script (using the os.environ.get('USERNAME') function call)
+    :param USER_NAME: The username of the user running the script (using the os.environ.get('USER_NAME') function call)
     :param
 
     """
 
     cwd = os.getcwd()
+    os.environ.get("USER_NAME")
+
+    project_path = "/Users/{USER_NAME}/sbox/PycharmProjects/SQL_Template/"
 
     # Create the CSV file and write the header
     with open("data/todo_tags.csv", "w", newline="") as csvfile:
@@ -55,3 +69,15 @@ def scan_todo_tags():
                                     os.environ.get("USERNAME"),
                                 ]
                             )
+
+
+if __name__ == "__main__":
+    USER_NAME = environ.get("USER_NAME")
+    DIRECTORY_PATH = f"/Users/" f"{USER_NAME}/sbox/PycharmProjects/SQL_Template/data/"
+    DESTINATION_PATH = f"/Users/{USER_NAME}/sbox/PycharmProjects/SQL_Template/data/processed/"
+    PROJECT_PATH = f"/Users/{USER_NAME}/sbox/PycharmProjects/SQL_Template/"
+
+    # Find .env file
+    basedir = path.abspath(path.dirname(__file__))
+    load_dotenv(path.join(basedir, ".env"))
+    main()

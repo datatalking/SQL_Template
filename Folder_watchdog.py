@@ -14,6 +14,7 @@ import os
 import shutil
 from os import environ, path
 from dotenv import load_dotenv
+import TODO_scanner
 
 load_dotenv()
 
@@ -24,6 +25,7 @@ def main():
     :return:
     """
     csv_order_collection()
+    TODO_scanner()
 
 
 # TODO need to adjust split as we are missing first few words in /data
@@ -55,9 +57,6 @@ def csv_order_collection():
             shutil.move(filepath, destination_file)
 
         time.sleep(10)
-
-
-def TODO_scanner():
 
 
 if __name__ == "__main__":
