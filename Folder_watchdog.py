@@ -57,6 +57,9 @@ def csv_order_collection():
         time.sleep(10)
 
 
+def TODO_scanner():
+
+
 if __name__ == "__main__":
     USER_NAME = environ.get("USER_NAME")
     directory_path = f"/Users/" f"{USER_NAME}/sbox/PycharmProjects/SQL_Template/data/"

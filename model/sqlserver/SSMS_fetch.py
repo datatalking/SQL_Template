@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
+# TODO move to within .env
 # Database connection details
 db_host = os.getenv("SSMS_DB_HOST")
 db_port = os.getenv("SSMS_DB_PORT")
@@ -13,6 +14,8 @@ db_user = os.getenv("SSMS_DB_USER")
 db_password = os.getenv("SSMS_DB_PASSWORD")
 db_name = os.getenv("SSMS_DB_NAME")
 
+
+# TODO move to within main at bottom
 # Define TSV file path
 tsv_file_path = (
     "Users/wadewilson/sbox/PycharmProjects/realestate_data/data"

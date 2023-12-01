@@ -16,7 +16,7 @@
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="my_lite_store" uuid="91bc0425-de2a-40f4-bdfd-9ea25580023a">
-      <driver-ref>sqlite.xerial</driver-ref>
+      <driver-ref>2c9b5d74-2795-44a9-97b5-1c20f96537e1</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/my_lite_store.db</jdbc-url>
@@ -26,6 +26,14 @@
           <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.40.1/org/xerial/sqlite-jdbc/3.40.1.0/sqlite-jdbc-3.40.1.0.jar</url>
         </library>
       </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="@localhost" uuid="e1e29819-046e-4ebf-b6a5-35208cf9bc93">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>People_DB</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
 </project>
